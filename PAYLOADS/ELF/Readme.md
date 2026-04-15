@@ -1,9 +1,9 @@
-use this command for compilling
-**make sure compiler is installed 
-sudo apt install musl-tools
+#### Use this command for compilling
 
-**when compiling normal file
-musl-gcc -static -Os -s -o test.elf test.c 
+Make sure compiler is installed
+`sudo apt install musl-tools`
 
-**when compiling reverseshell.
-musl-gcc -static -Os -s -o rev.elf rev.c -z execstack
+- when compiling normal file
+`musl-gcc -static -Os -s -o test.elf test.c`
+- when compiling reverseshell.
+`musl-gcc -static -Os -s -o rev.elf rev.c -z execstack`
